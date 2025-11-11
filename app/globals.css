@@ -1,52 +1,84 @@
 @import "tailwindcss";
 
 :root {
-  --color-foam: #edede9;
-  --color-sand: #d6ccc2;
-  --color-shell: #f5ebe0;
-  --color-dune: #e3d5ca;
-  --color-clay: #d5bdaf;
-  --color-ink: #3c3732;
-  --color-shadow: #241f1b;
-
-  --background: var(--color-shell);
-  --foreground: var(--color-ink);
-  --color-primary: var(--color-clay);
-  --color-primary-soft: var(--color-dune);
-  --color-accent: var(--color-sand);
-  --color-accent-soft: var(--color-foam);
-  --color-deep: var(--color-ink);
-  --color-surface: var(--color-shell);
+  --page-background: #ffffff;
+  --page-foreground: #101828;
+  --page-heading: #0f172a;
+  --page-muted: #4b5563;
+  --page-meta: #9ca3af;
+  --page-border: #e5e7eb;
+  --page-surface: #ffffff;
+  --page-subtle: #f8fafc;
+  --page-accent: #1d4ed8;
+  --page-radius: 18px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--color-primary);
-  --color-primary-muted: var(--color-primary-soft);
-  --color-accent: var(--color-accent);
-  --color-accent-muted: var(--color-accent-soft);
-  --color-deep: var(--color-deep);
-  --color-surface: var(--color-surface);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  --page-background: #0b1120;
+  --page-foreground: #f8fafc;
+  --page-heading: #e0e7ff;
+  --page-muted: #cbd5f5;
+  --page-meta: #94a3b8;
+  --page-border: rgba(148, 163, 184, 0.25);
+  --page-surface: #111828;
+  --page-subtle: rgba(148, 163, 184, 0.08);
+  --page-accent: #93c5fd;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--color-ink);
-    --foreground: var(--color-shell);
-    --color-primary: var(--color-clay);
-    --color-primary-soft: var(--color-dune);
-    --color-accent: var(--color-sand);
-    --color-accent-soft: var(--color-foam);
-    --color-deep: var(--color-shell);
-    --color-surface: #322c27;
+    --page-background: #0b1120;
+    --page-foreground: #f8fafc;
+    --page-heading: #e0e7ff;
+    --page-muted: #cbd5f5;
+    --page-meta: #94a3b8;
+    --page-border: rgba(148, 163, 184, 0.25);
+    --page-surface: #111828;
+    --page-subtle: rgba(148, 163, 184, 0.08);
+    --page-accent: #93c5fd;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-background);
+  color: var(--page-foreground);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::selection {
+  background-color: rgba(15, 23, 42, 0.12);
+  color: var(--page-accent);
+}
+
+[data-theme="dark"] ::selection {
+  background-color: rgba(147, 197, 253, 0.35);
+  color: #0b1120;
+}
+
+.indented-paragraph {
+  position: relative;
+  padding-left: 1.5rem;
+  max-width: 48rem;
+}
+
+.indented-paragraph::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  bottom: 0.65em;
+  left: 0;
+  width: 1px;
+  background: var(--page-border);
 }

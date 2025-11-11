@@ -1,51 +1,65 @@
-﻿import { experience } from "@/data/resume";
+import { experience } from "@/data/resume";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-[var(--color-shell)]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center text-[var(--color-deep)]">
-          Work Experience
+    <section
+      id="experience"
+      className="mx-auto max-w-4xl border-b border-[var(--page-border)] px-6 py-16 sm:py-20"
+    >
+      <header className="mb-12 space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--page-meta)]">
+          Experience
+        </p>
+        <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
+          Led multi-disciplinary teams to ship resilient products
         </h2>
-        <div className="space-y-12">
-          {experience.map((job, index) => (
-            <div
-              key={index}
-              className="bg-[var(--color-foam)] rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 shadow-sm"
-            >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-[var(--color-deep)]">
-                    {job.role}
-                  </h3>
-                  <p className="text-xl text-[var(--color-primary)] font-semibold">
+        <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
+          I combine engineering leadership with actionable input. I excel at collaborating
+          closely with stakeholders, delivering measurable outcomes, and driving innovation
+          initiatives whenever possible.
+        </p>
+      </header>
+
+      <div className="space-y-12">
+        {experience.map((job) => (
+          <article
+            key={`${job.company}-${job.role}`}
+            className="grid gap-6 border-b border-[var(--page-border)] pb-10 last:border-none last:pb-0 sm:grid-cols-[160px_1fr]"
+          >
+            <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--page-meta)]">
+              {job.period}
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="text-xl font-semibold text-[var(--page-heading)] sm:text-2xl">
+                  {job.role}
+                </h3>
+                <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--page-muted)]">
+                  <span className="font-medium uppercase tracking-[0.25em] text-[var(--page-meta)]">
                     {job.company}
-                  </p>
-                </div>
-                <div className="mt-2 md:mt-0 md:text-right text-[var(--color-deep)]">
-                  <p className="font-medium">
-                    {job.period}
-                  </p>
-                  <p className="text-sm opacity-70">{job.location}</p>
+                  </span>
+                  <span className="h-1 w-1 rounded-full bg-[var(--page-border)]" />
+                  <span>{job.location}</span>
                 </div>
               </div>
-              <p className="text-[var(--color-deep)] opacity-80 mb-4 leading-relaxed">
+
+              <p className="indented-paragraph text-sm leading-6 text-[var(--page-muted)]">
                 {job.description}
               </p>
-              <ul className="space-y-2">
-                {job.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="text-[var(--color-primary)] mr-2 mt-1">-</span>
-                    <span className="text-[var(--color-deep)]">{achievement}</span>
+
+              <ul className="indented-paragraph space-y-3 text-sm leading-6 text-[var(--page-muted)]">
+                {job.achievements.map((achievement) => (
+                  <li key={achievement} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--page-meta)]" />
+                    <span>{achievement}</span>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
-
-

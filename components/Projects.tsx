@@ -2,58 +2,59 @@ import { projects } from "@/data/resume";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-[var(--color-foam)]">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center text-[var(--color-deep)]">
-          Featured Projects
+    <section
+      id="projects"
+      className="mx-auto max-w-4xl border-b border-[var(--page-border)] px-6 py-16 sm:py-20"
+    >
+      <header className="mb-10 space-y-3">
+        <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
+          Projects
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-[var(--color-shell)] rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-[var(--color-sand)]"
-            >
-              <h3 className="text-xl font-bold text-[var(--color-deep)] mb-3">
-                {project.title}
-              </h3>
-              <p className="text-[var(--color-ink)] opacity-80 mb-4 leading-relaxed">
+        <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
+          A cross-section of platforms, automations, and developer tooling I have
+          designed and shipped across education and eCommerce domains.
+        </p>
+      </header>
+
+      <div className="space-y-10">
+        {projects.map((project, index) => (
+          <article
+            key={project.title}
+            className="space-y-4 border-b border-[var(--page-border)] pb-8 last:border-none last:pb-0"
+          >
+            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--page-meta)]">
+              <span>{(project.technologies && project.technologies[0]) || `0${index + 1}`}</span>
+              <span className="hidden h-px w-12 bg-[var(--page-border)] sm:block" />
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+                <h3 className="text-xl font-semibold text-[var(--page-heading)] sm:text-2xl">
+                  {project.title}
+                </h3>
+              </div>
+              <p className="indented-paragraph text-sm leading-6 text-[var(--page-muted)]">
                 {project.description}
               </p>
-              <div className="mb-4">
-                <p className="text-sm font-semibold text-[var(--color-deep)] mb-2">
-                  Technologies:
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-[var(--color-dune)] text-[var(--color-ink)] px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
+              {project.highlights.length > 0 && (
+                <ul className="indented-paragraph space-y-2 text-sm leading-6 text-[var(--page-muted)]">
+                  {project.highlights.map((highlight) => (
+                    <li key={`${project.title}-${highlight}`} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--page-meta)]" />
+                      <span>{highlight}</span>
+                    </li>
                   ))}
-                </div>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-[var(--color-deep)] mb-2">
-                  Highlights:
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.highlights.map((highlight, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-[var(--color-primary)] text-[var(--color-ink)] px-2 py-1 rounded"
-                    >
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
+                </ul>
+              )}
+              <div className="flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.24em] text-[var(--page-meta)]">
+                {project.technologies.map((tech) => (
+                  <span key={`${project.title}-${tech}`}>{tech}</span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
-

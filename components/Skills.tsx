@@ -1,63 +1,55 @@
 import { skills } from "@/data/resume";
 
+const skillCategories = [
+  { title: "Languages", items: skills.languages },
+  { title: "Frontend", items: skills.frontend },
+  { title: "Backend", items: skills.backend },
+  { title: "Databases", items: skills.databases },
+  { title: "Cloud & DevOps", items: skills.cloud },
+  { title: "Tools & APIs", items: [...skills.tools, ...skills.apis] },
+];
+
 export default function Skills() {
-  const skillCategories = [
-    { title: "Languages", items: skills.languages, tone: "ink" },
-    { title: "Frontend", items: skills.frontend, tone: "primary" },
-    { title: "Backend", items: skills.backend, tone: "dune" },
-    { title: "Databases", items: skills.databases, tone: "sand" },
-    { title: "Cloud & DevOps", items: skills.cloud, tone: "shadow" },
-    {
-      title: "Tools & APIs",
-      items: skills.tools.concat(skills.apis),
-      tone: "foam",
-    },
-  ];
-
-  const getToneClasses = (tone: string) => {
-    const tones: Record<string, string> = {
-      primary: "bg-[var(--color-primary)] text-[var(--color-ink)]",
-      dune: "bg-[var(--color-dune)] text-[var(--color-ink)]",
-      sand: "bg-[var(--color-sand)] text-[var(--color-ink)]",
-      foam: "bg-[var(--color-foam)] text-[var(--color-ink)] border border-[var(--color-sand)]",
-      ink: "bg-[var(--color-ink)] text-[var(--color-shell)]",
-      shadow: "bg-[var(--color-shadow)] text-[var(--color-shell)]",
-    };
-    return tones[tone] || tones.primary;
-  };
-
   return (
-    <section id="skills" className="py-20 bg-[var(--color-shell)]">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-center text-[var(--color-deep)]">
-          Skills & Technologies
+    <section
+      id="skills"
+      className="mx-auto max-w-4xl border-b border-[var(--page-border)] px-6 py-16 sm:py-20"
+    >
+      <header className="mb-10 space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--page-meta)]">
+          Skills
+        </p>
+        <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
+          Modern stack coverage from UI to infrastructure
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-[var(--color-foam)] rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 border border-[var(--color-sand)]"
-            >
-              <h3 className="text-xl font-bold text-[var(--color-deep)] mb-4">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {category.items.map((skill, i) => (
-                  <span
-                    key={i}
-                    className={`text-sm px-3 py-1 rounded-full font-medium ${getToneClasses(
-                      category.tone
-                    )}`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+        <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
+          From design systems and React apps to event-driven automations, I build
+          maintainable systems with a pragmatic tooling mix tailored to each team.
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {skillCategories.map((category) => (
+          <article
+            key={category.title}
+            className="flex h-full flex-col gap-3 border-b border-[var(--page-border)] pb-6 last:border-none"
+          >
+            <h3 className="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--page-meta)]">
+              {category.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {category.items.map((skill) => (
+                <span
+                  key={`${category.title}-${skill}`}
+                  className="rounded-full border border-[var(--page-border)] px-3 py-1 text-xs font-medium tracking-wide text-[var(--page-muted)]"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-          ))}
-        </div>
+          </article>
+        ))}
       </div>
     </section>
   );
 }
-
