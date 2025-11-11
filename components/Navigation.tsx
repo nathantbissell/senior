@@ -25,7 +25,7 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-900/95 backdrop-blur-sm shadow-lg"
+          ? "bg-[var(--color-ink)] backdrop-blur-sm shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -33,7 +33,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <a
             href="#"
-            className="text-xl font-bold text-white hover:text-blue-400 transition-colors"
+            className="text-xl font-bold text-[var(--color-shell)] hover:text-[var(--color-primary-soft)] transition-colors"
           >
             NB
           </a>
@@ -44,7 +44,7 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-300 hover:text-white transition-colors font-medium"
+                className="text-[var(--color-dune)] hover:text-[var(--color-shell)] transition-colors font-medium"
               >
                 {link.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-[var(--color-shell)]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -88,7 +88,7 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-2 text-slate-300 hover:text-white transition-colors"
+                className="block py-2 text-[var(--color-dune)] hover:text-[var(--color-shell)] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

@@ -2,17 +2,20 @@ import { personalInfo } from "@/data/resume";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-[var(--color-ink)] via-[var(--color-shadow)] to-[var(--color-ink)] text-[var(--color-shell)]"
+    >
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
-        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
-          <p className="text-lg text-slate-300 mb-8 text-center">
+        <div className="bg-[var(--color-sand)] rounded-lg p-8 shadow-xl text-[var(--color-ink)]">
+          <p className="text-lg text-[var(--color-ink)] opacity-70 mb-8 text-center">
             I'm always interested in hearing about new opportunities and
             collaborations. Feel free to reach out!
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center space-x-4">
-              <div className="bg-blue-600 p-3 rounded-lg">
+              <div className="bg-[var(--color-primary)] p-3 rounded-lg text-[var(--color-ink)]">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -28,17 +31,19 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-slate-400">Email</p>
+                <p className="text-sm text-[var(--color-shadow)] opacity-70">
+                  Email
+                </p>
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                  className="text-[var(--color-ink)] hover:text-[var(--color-shadow)] transition-colors font-semibold"
                 >
                   {personalInfo.email}
                 </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="bg-emerald-600 p-3 rounded-lg">
+              <div className="bg-[var(--color-dune)] p-3 rounded-lg text-[var(--color-ink)]">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -54,17 +59,19 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-slate-400">Phone</p>
+                <p className="text-sm text-[var(--color-shadow)] opacity-70">
+                  Phone
+                </p>
                 <a
                   href={`tel:${personalInfo.phone}`}
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                  className="text-[var(--color-ink)] hover:text-[var(--color-shadow)] transition-colors font-semibold"
                 >
                   {personalInfo.phone}
                 </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="bg-purple-600 p-3 rounded-lg">
+              <div className="bg-[var(--color-foam)] p-3 rounded-lg text-[var(--color-ink)] border border-[var(--color-sand)]">
                 <svg
                   className="w-6 h-6"
                   fill="none"
@@ -86,13 +93,17 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-slate-400">Location</p>
-                <p className="text-purple-400">{personalInfo.location}</p>
+                <p className="text-sm text-[var(--color-shadow)] opacity-70">
+                  Location
+                </p>
+                <p className="text-[var(--color-ink)] font-semibold">
+                  {personalInfo.location}
+                </p>
               </div>
             </div>
             {personalInfo.github && (
               <div className="flex items-center space-x-4">
-                <div className="bg-slate-700 p-3 rounded-lg">
+                <div className="bg-[var(--color-shadow)] p-3 rounded-lg text-[var(--color-shell)]">
                   <svg
                     className="w-6 h-6"
                     fill="currentColor"
@@ -106,12 +117,14 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm text-slate-400">GitHub</p>
+                  <p className="text-sm text-[var(--color-shadow)] opacity-70">
+                    GitHub
+                  </p>
                   <a
                     href={personalInfo.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-300 hover:text-white transition-colors"
+                    className="text-[var(--color-ink)] hover:text-[var(--color-shadow)] transition-colors font-semibold"
                   >
                     View Profile
                   </a>

@@ -1,21 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-foam: #edede9;
+  --color-sand: #d6ccc2;
+  --color-shell: #f5ebe0;
+  --color-dune: #e3d5ca;
+  --color-clay: #d5bdaf;
+  --color-ink: #3c3732;
+  --color-shadow: #241f1b;
+
+  --background: var(--color-shell);
+  --foreground: var(--color-ink);
+  --color-primary: var(--color-clay);
+  --color-primary-soft: var(--color-dune);
+  --color-accent: var(--color-sand);
+  --color-accent-soft: var(--color-foam);
+  --color-deep: var(--color-ink);
+  --color-surface: var(--color-shell);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-muted: var(--color-primary-soft);
+  --color-accent: var(--color-accent);
+  --color-accent-muted: var(--color-accent-soft);
+  --color-deep: var(--color-deep);
+  --color-surface: var(--color-surface);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-ink);
+    --foreground: var(--color-shell);
+    --color-primary: var(--color-clay);
+    --color-primary-soft: var(--color-dune);
+    --color-accent: var(--color-sand);
+    --color-accent-soft: var(--color-foam);
+    --color-deep: var(--color-shell);
+    --color-surface: #322c27;
   }
 }
 
