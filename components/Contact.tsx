@@ -42,11 +42,11 @@ export default function Contact() {
           Contact
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Let's build something impactful together
+          Let&rsquo;s build something impactful together
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          I'm open to senior engineering roles, short-term consulting, and
-          collaboration on automation and AI initiatives. Reach out and we'll find a
+          I&rsquo;m open to senior engineering roles, short-term consulting, and
+          collaboration on automation and AI initiatives. Reach out and we&rsquo;ll find a
           time to connect.
         </p>
       </header>
