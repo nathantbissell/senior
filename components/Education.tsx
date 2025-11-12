@@ -30,7 +30,7 @@ export default function Education() {
                 <h3 className="text-lg font-semibold text-[var(--page-heading)] sm:text-xl">
                   {entry.degree}
                 </h3>
-                <p className="text-sm text-[var(--page-muted)]">{entry.school}</p>
+                <p className="mt-2 text-sm text-[var(--page-muted)]">{entry.school}</p>
               </div>
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--page-meta)]">
                 {entry.year}
@@ -39,9 +39,6 @@ export default function Education() {
 
             {entry.awards?.length ? (
               <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--page-meta)]">
-                  Awards
-                </p>
                 <ul className="indented-paragraph space-y-2 text-sm text-[var(--page-muted)]">
                   {entry.awards.map((award) => (
                     <li key={`${entry.school}-${award}`} className="flex gap-2">

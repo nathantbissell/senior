@@ -58,13 +58,62 @@ export const projects = [
     description:
       "Customer-facing portal for automated contract review using OpenAI with customizable validation criteria.",
     technologies: ["Ruby on Rails", "OpenAI API", "PostgreSQL", "JavaScript"],
+    image_url: "https://cdn.iconscout.com/icon/free/png-256/free-loom-icon-svg-download-png-10439220.png",
+    source_url: "https://www.loom.com/share/f6f7816341ab44adb140ebe385fdde47",
     highlights: ["Acted as a first point of contact for new service contracts proposed to The College", "Fully customizable settings to control number of reviews, custom LLM personality prompts, and failure safeguards.", "Immediately diagnosed issues with any contract requirements and ensured basic compliance standards are met", "Automated emails to provide transparency and ensure stakeholders are notified when contracts passed validation"],
+  },
+  {
+    title: "Campus Events Syndication Platform",
+    description:
+      "Event aggregation API powering intranet and public endpoints with daily data sync.",
+    technologies: ["Ruby on Rails", "SolidQueue", "ActiveRecord", "RESTful APIs"],
+    image_url: "https://i.imgur.com/QGlZyKv.jpeg",
+    source_url: "https://hcapps.holycross.edu/events-system/",
+    highlights: ["Promoted adoption of newly implemented campus Intranet system", "Allowed for events to be staged directly on holycross.edu/events as a public facing API", "Fully automated daily synchronization of events from multiple campus departments into a single source of truth", "Full admin views with a searchable Scheduled Events list, Syndication Rules, and Destinations."],
+  },
+  {
+    title: "Grade Distribution Report",
+    description:
+      "",
+    technologies: ["Ruby on Rails", "Oracle" ],
+    image_url: "https://i.imgur.com/nQEH45y.jpeg",
+    source_url: "https://hcapps.holycross.edu/grades/",
+    highlights: ["placeholder", ],
+  },
+  {
+    title: "Secure File Transfer System",
+    description:
+      "",
+    technologies: ["Ruby on Rails", "ActiveStorage", "MailChimp API"],
+    image_url: "https://i.imgur.com/1tLmMUZ.jpeg",
+    source_url: "https://hcapps.holycross.edu/file-transfer/",
+    highlights: ["placeholder", ],
+  },
+  {
+    title: "Equipment Lending System",
+    description:
+      "",
+    technologies: ["React", "TypeScript", "NodeJs" ],
+    image_url: "https://i.imgur.com/Z2fIoBh.jpeg",
+    source_url: "https://hcapps.holycross.edu/file-transfer/",
+    highlights: ["placeholder", ],
+  },
+    {
+    title: "Atrium Meal Dashboard",
+    description:
+      "Real-time meal swipe dashboard with live API data and time-based reporting.",
+    technologies: ["React", "TypeScript", "REST API", "Real-time Data"],
+    image_url: "https://i.imgur.com/r0Sujgt.jpeg",
+    source_url: "https://hcapps.holycross.edu/hcs/meals/",
+    highlights: ["Currently displayed in the back of house kitchen area for all dining staff", "Provides excellent data visualization and insight to the amount of meal swipes being used on a daily basis"],
   },
   {
     title: "Saderbot AI Assistant",
     description:
       "A Zoom chatbot fully integrated with OpenAI's Assistant API.",
     technologies: ["Node.js", "AWS Lambda", "OpenAI API", "Zoom API"],
+    image_url: "https://i.imgur.com/PKCpcx5.png",
+    source_url: "",
     highlights: ["Promoted adoption of Zoom Chat, as many team members were more accustomed to Slack", "Automatic context resetting after one hour to ensure context limits were not reached", "Took the place of a primitive Slack bot previously implemented by ITS department"],
   },
   {
@@ -72,27 +121,17 @@ export const projects = [
     description:
       "Automated attendance reports to the entire ITS department using UKG and Zoom Chat APIs.",
     technologies: ["Node.js", "AWS Lambda", "DynamoDB", "Zoom Chat API"],
+    image_url: "https://i.imgur.com/SxXfvtq.jpeg",
+    source_url: "",
     highlights: ["Allowed better transparency into who was available during work day", "Ensured meetings are scheduled with available participants", "Allowed ad-hoc reports on public and private channels"],
-  },
-  {
-    title: "Campus Events Syndication Platform",
-    description:
-      "Event aggregation API powering intranet and public endpoints with daily data sync.",
-    technologies: ["Ruby on Rails", "SolidQueue", "ActiveRecord", "RESTful APIs"],
-    highlights: ["Promoted adoption of newly implemented campus Intranet system", "Allowed for events to be staged directly on holycross.edu/events as a public facing API", "Fully automated daily synchronization of events from multiple campus departments into a single source of truth", "Full admin views with a searchable Scheduled Events list, Syndication Rules, and Destinations."],
-  },
-    {
-    title: "Atrium Meal Dashboard",
-    description:
-      "Real-time meal swipe dashboard with live API data and time-based reporting.",
-    technologies: ["React", "TypeScript", "REST API", "Real-time Data"],
-    highlights: ["Currently displayed in the back of house kitchen area for all dining staff", "Provides excellent data visualization and insight to the amount of meal swipes being used on a daily basis"],
   },
   {
     title: "Connex Reporting Tool",
     description:
       "A reporting platform with five major eCommerce platform integrations.",
     technologies: ["ASP.NET Core", "React", "TypeScript", "Redux", "Entity Framework"],
+    image_url: "https://i.imgur.com/6igy8v4.jpeg",
+    source_url: "https://inventory.connexecommerce.com/dashboard",
     highlights: ["Multi-API Integration (Stripe, ShipStation, WooCommerce, Shopify, Amazon)", "Integrated directly with an existing QuickBooks Online connection to inject reporting data"],
   },
 ];

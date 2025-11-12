@@ -45,7 +45,7 @@ export default function Navigation() {
     applyTheme(nextTheme);
   };
 
-  const brandName = personalInfo.name.split(" ")[0] ?? "Portfolio";
+  const brandName = "NB";
 
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--page-border)] bg-[var(--page-background)]/95 backdrop-blur transition-colors">

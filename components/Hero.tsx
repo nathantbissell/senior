@@ -16,9 +16,11 @@ export default function Hero() {
       <div className="flex flex-col gap-10 md:flex-row md:items-center md:gap-12">
         <div className="flex shrink-0 items-center justify-center">
           <div className="relative h-28 w-28 overflow-hidden rounded-full border border-[var(--page-border)] bg-[var(--page-subtle)] md:h-32 md:w-32">
-            <div className="flex h-full w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_top,_#ffffff,_#e2e8f0)] text-3xl font-semibold tracking-[0.35em] text-[var(--page-heading)] md:text-4xl">
-              {initials}
-            </div>
+            <img
+              src="https://i.imgur.com/uEHEsbp.jpeg"
+              alt={`${personalInfo.name} avatar`}
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
 

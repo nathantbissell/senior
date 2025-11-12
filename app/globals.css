@@ -84,13 +84,3 @@ a:hover {
   padding-left: 1.5rem;
   max-width: 48rem;
 }
-
-.indented-paragraph::before {
-  content: "";
-  position: absolute;
-  top: 0.65em;
-  bottom: 0.65em;
-  left: 0;
-  width: 1px;
-  background: var(--page-border);
-}

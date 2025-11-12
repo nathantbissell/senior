@@ -23,8 +23,7 @@ export default function Skills() {
           Modern stack coverage from UI to infrastructure
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          From design systems and React apps to event-driven automations, I build
-          maintainable systems with a pragmatic tooling mix tailored to each team.
+        Modern stack coverage from UI to infrastructure
         </p>
       </header>
 
