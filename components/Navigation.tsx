@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { personalInfo } from "@/data/resume";
 
 type Theme = "light" | "dark";
@@ -18,6 +18,17 @@ export default function Navigation() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState<Theme>("light");
 
+  const applyTheme = useCallback((value: Theme) => {
+    setTheme(value);
+    if (typeof document !== "undefined") {
+      document.documentElement.setAttribute("data-theme", value);
+      document.documentElement.style.setProperty("color-scheme", value);
+    }
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("theme", value);
+    }
+  }, []);
+
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -25,18 +36,13 @@ export default function Navigation() {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const nextTheme = storedTheme ?? (prefersDark ? "dark" : "light");
 
-    setTheme(nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme);
+    applyTheme(nextTheme);
     setMounted(true);
-  }, []);
+  }, [applyTheme]);
 
   const toggleTheme = () => {
     const nextTheme: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme);
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("theme", nextTheme);
-    }
+    applyTheme(nextTheme);
   };
 
   const brandName = personalInfo.name.split(" ")[0] ?? "Portfolio";
@@ -172,4 +178,3 @@ function CloseIcon() {
     </svg>
   );
 }
-

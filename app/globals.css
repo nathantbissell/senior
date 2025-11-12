@@ -13,6 +13,18 @@
   --page-radius: 18px;
 }
 
+[data-theme="light"] {
+  --page-background: #ffffff;
+  --page-foreground: #101828;
+  --page-heading: #0f172a;
+  --page-muted: #4b5563;
+  --page-meta: #9ca3af;
+  --page-border: #e5e7eb;
+  --page-surface: #ffffff;
+  --page-subtle: #f8fafc;
+  --page-accent: #1d4ed8;
+}
+
 [data-theme="dark"] {
   --page-background: #0b1120;
   --page-foreground: #f8fafc;
@@ -26,7 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --page-background: #0b1120;
     --page-foreground: #f8fafc;
     --page-heading: #e0e7ff;
