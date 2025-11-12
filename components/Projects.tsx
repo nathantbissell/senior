@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { projects } from "@/data/resume";
+import { withBasePath } from "@/lib/basePath";
 
 const TECH_ICON_MAP: Record<string, string> = {
   "Ruby on Rails": "/tech-icons/ruby-on-rails.svg",
@@ -66,7 +67,7 @@ export default function Projects() {
                   <>
                     {primaryTechnologyIcon && (
                       <Image
-                        src={primaryTechnologyIcon}
+                        src={withBasePath(primaryTechnologyIcon)}
                         alt={`${primaryTechnology} icon`}
                         width={32}
                         height={32}

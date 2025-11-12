@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { experience } from "@/data/resume";
+import { withBasePath } from "@/lib/basePath";
 
 const COMPANY_LOGO_MAP: Record<string, { src: string; size: number }> = {
   "College of the Holy Cross": { src: "/company-icons/holycross.svg", size: 72 },
@@ -39,7 +40,7 @@ export default function Experience() {
               </span>
               {COMPANY_LOGO_MAP[job.company] && (
                 <Image
-                  src={COMPANY_LOGO_MAP[job.company].src}
+                  src={withBasePath(COMPANY_LOGO_MAP[job.company].src)}
                   alt={`${job.company} logo`}
                   width={COMPANY_LOGO_MAP[job.company].size}
                   height={COMPANY_LOGO_MAP[job.company].size}
