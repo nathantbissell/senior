@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="flex shrink-0 items-center justify-center">
           <div className="relative h-28 w-28 overflow-hidden rounded-full border border-[var(--page-border)] bg-[var(--page-subtle)] md:h-32 md:w-32">
             <img
-              src="https://i.imgur.com/uEHEsbp.jpeg"
+              src="https://i.imgur.com/YmyaRFj.jpeg"
               alt={`${personalInfo.name} avatar`}
               className="h-full w-full object-cover"
             />

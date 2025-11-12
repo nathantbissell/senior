@@ -1,11 +1,11 @@
 export const personalInfo = {
   name: "Nathan Bissell",
   title: "Full Stack Web Developer",
-  location: "Connecticut",
+  location: "Connecticut, Rhode Island, Greater Boston Area",
   email: "nathantbissell@gmail.com",
   phone: "401-556-2161",
   summary:
-    "Six years as a full stack web developer with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Currently part of the Applications Team in higher education, partnering with faculty, staff, and students to deliver reliable digital experiences.",
+    "Six years as a Full Stack SWE with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Current member of the Internal Applications Team in a higher education setting, partnering with faculty, staff, and students amongst a top Liberal Arts College in the nation.",
   linkedin: "https://www.linkedin.com/in/nathan-bissell/",
   github: "https://github.com/nathantbissell",
 };
@@ -16,8 +16,8 @@ export const skills = {
   backend: ["Node.js", "Ruby on Rails", "ASP.NET Core", "Entity Framework", "Express.js"],
   databases: ["PostgreSQL", "DynamoDB", "Oracle", "MongoDB"],
   cloud: ["AWS Lambda", "S3", "DynamoDB", "Elastic Container Service", "Azure DevOps"],
-  tools: ["Git", "Docker", "Postman" ],
-  apis: ["OpenAI", "Zoom", "Shopify", "QuickBooks", "Stripe", "AudienceView", "Hubspot", "Salesforce", ],
+  tools: ["Git", "Docker", "Postman"],
+  apis: ["OpenAI", "Zoom", "Shopify", "QuickBooks", "Stripe", "AudienceView", "Hubspot", "Salesforce", "SolarWinds", "Zoom Chat API"],
 };
 
 export const experience = [
@@ -27,13 +27,8 @@ export const experience = [
     period: "2023 - Now",
     location: "Worcester, MA",
     description:
-      "Lead AI automations and data integration projects for Information Technology Services, delivering solutions that serve the broader campus community on schedule.",
+      "Lead AI automations and data integration projects for Information Technology Services, delivering solutions that serve the broader campus community.",
     achievements: [
-      "AI Contract Review Service: Built a customer-facing portal in Ruby on Rails with OpenAI integration for automated contract review with customizable LLM prompts and validation criteria.",
-      "Saderbot AI Assistant: Designed and deployed a ChatGPT-powered Zoom chatbot using Node.js and AWS to automate campus-wide information retrieval.",
-      "UKG Attendance Bot: Built an automated daily attendance system using Node.js, AWS Lambda/DynamoDB, and Zoom Chat APIs, eliminating manual reporting for 50+ employees.",
-      "Campus Events Syndication: Designed an event aggregation API platform (Ruby on Rails, SolidQueue, ActiveRecord) powering both intranet and public event endpoints.",
-      "Atrium Meal Dashboard: Developed a real-time meal swipe dashboard in React/TypeScript with live API data integration.",
     ],
   },
   {
@@ -42,11 +37,11 @@ export const experience = [
     period: "2020 - 2023",
     location: "Remote",
     description:
-      "Worked across a C#, ASP.NET Core, and Entity Framework application supporting hundreds of merchants, with a focus on reliability, integrations, and customer success.",
+      "Worked across a C#, ASP.NET Core, and Entity Framework application supporting thousands of merchants, with a focus on reliability, integrations, and customer success.",
     achievements: [
       "Reduced total support tickets by 21% and increased gross sales volume by 45% in one year.",
       "Led an eight-month project to consolidate multiple ASP.NET MVC 5 codebases into a single ASP.NET Core application.",
-      "Built an AI-based reporting tool (connexreporting.com) with five major eCommerce integrations (Shopify, Amazon, WooCommerce, ShipStation, Stripe).",
+      "Built a customizable reporting tool with five major eCommerce integrations (Shopify, Amazon, WooCommerce, ShipStation, Stripe).",
       "Served as the primary escalation contact for debugging eCommerce API issues and QuickBooks QBXML mapping.",
     ],
   },
@@ -58,7 +53,7 @@ export const projects = [
     description:
       "Customer-facing portal for automated contract review using OpenAI with customizable validation criteria.",
     technologies: ["Ruby on Rails", "OpenAI API", "PostgreSQL", "JavaScript"],
-    image_url: "https://cdn.iconscout.com/icon/free/png-256/free-loom-icon-svg-download-png-10439220.png",
+    image_url: "https://i.imgur.com/q2P7rFg.jpeg",
     source_url: "https://www.loom.com/share/f6f7816341ab44adb140ebe385fdde47",
     highlights: ["Acted as a first point of contact for new service contracts proposed to The College", "Fully customizable settings to control number of reviews, custom LLM personality prompts, and failure safeguards.", "Immediately diagnosed issues with any contract requirements and ensured basic compliance standards are met", "Automated emails to provide transparency and ensure stakeholders are notified when contracts passed validation"],
   },
@@ -86,7 +81,7 @@ export const projects = [
       "A system built for sending confidential documents to internal and external users",
     technologies: ["Ruby on Rails", "MailChimp API", "Okta"],
     image_url: "https://i.imgur.com/1tLmMUZ.jpeg",
-    source_url: "https://hcapps.holycross.edu/file-transfer/",
+    source_url: "https://hcappsdev.holycross.edu/file-transfer/",
     highlights: ["Refreshed an existing transfer system with modern UI", "allowed for better validation, enhanced features such as requesting files or CC (Carbon Copy) users to have access to files" ],
   },
   {
@@ -94,7 +89,7 @@ export const projects = [
     description:
       "An ingestion service that parsed daily ticket sales data and created missing data in Hubspot CRM to assist with College Marketing Team",
     technologies: ["JavaScript", "Hubspot", "AWS Lambda", "S3"],
-    image_url: "",
+    image_url: "https://8713277.fs1.hubspotusercontent-na1.net/hubfs/8713277/Imported_Blog_Media/Hubspot%20-%20Logo%20img%201.png",
     source_url: "",
     highlights: ["Removed need to manually import users, deals, and events from a legacy ticketing system to newly purchased CRM tool", "Helped marketing build better campaigns, target alumni and recurring guests for special promotions, and avoid sending duplicate emails to potential customers"],
   },
@@ -128,7 +123,7 @@ export const projects = [
   {
     title: "UKG Attendance Bot",
     description:
-      "Automated attendance reports to the entire ITS department using UKG and Zoom Chat APIs.",
+      "Automated daily attendance reports using Node.js, AWS Lambda/DynamoDB, and Zoom Chat APIs, eliminating manual reporting for 50+ employees",
     technologies: ["Node.js", "AWS Lambda", "DynamoDB", "Zoom Chat API"],
     image_url: "https://i.imgur.com/SxXfvtq.jpeg",
     source_url: "",

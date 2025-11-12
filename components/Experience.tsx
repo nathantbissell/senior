@@ -11,10 +11,10 @@ export default function Experience() {
           Experience
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Led multi-disciplinary teams to ship resilient products
+          Led multi-disciplinary teams to ship clean, user-friendly products
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          I combine engineering leadership with actionable input. I excel at collaborating
+          I combine engineering leadership with proven, actionable output. I excel at collaborating
           closely with stakeholders, delivering measurable outcomes, and driving innovation
           initiatives whenever possible.
         </p>

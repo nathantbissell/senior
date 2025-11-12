@@ -20,7 +20,7 @@ export default function Skills() {
           Skills
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Modern stack coverage from UI to infrastructure
+          Experience with modern technologies
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
         Modern stack coverage from UI to infrastructure
