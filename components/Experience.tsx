@@ -1,4 +1,11 @@
+import Image from "next/image";
+
 import { experience } from "@/data/resume";
+
+const COMPANY_LOGO_MAP: Record<string, { src: string; size: number }> = {
+  "College of the Holy Cross": { src: "/company-icons/holycross.svg", size: 72 },
+  "Connex eCommerce": { src: "/company-icons/connex.svg", size: 84 },
+};
 
 export default function Experience() {
   return (
@@ -26,8 +33,23 @@ export default function Experience() {
             key={`${job.company}-${job.role}`}
             className="grid gap-6 border-b border-[var(--page-border)] pb-10 last:border-none last:pb-0 sm:grid-cols-[160px_1fr]"
           >
-            <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--page-meta)]">
-              {job.period}
+            <div className="flex flex-col items-center gap-4 text-[var(--page-meta)]">
+              <span className="text-center text-xs font-semibold uppercase tracking-[0.35em]">
+                {job.period}
+              </span>
+              {COMPANY_LOGO_MAP[job.company] && (
+                <Image
+                  src={COMPANY_LOGO_MAP[job.company].src}
+                  alt={`${job.company} logo`}
+                  width={COMPANY_LOGO_MAP[job.company].size}
+                  height={COMPANY_LOGO_MAP[job.company].size}
+                  className="object-contain mt-3"
+                  style={{
+                    width: COMPANY_LOGO_MAP[job.company].size,
+                    height: COMPANY_LOGO_MAP[job.company].size,
+                  }}
+                />
+              )}
             </div>
 
             <div className="space-y-4">

@@ -70,7 +70,7 @@ export const projects = [
     title: "Grade Distribution Report",
     description:
       "A full stack application which renders an archive of individual instructor and department level reports",
-    technologies: ["Ruby on Rails", "Oracle", "Okta" ],
+    technologies: ["Ruby on Rails", "Oracle", "Okta"],
     image_url: "https://i.imgur.com/nQEH45y.jpeg",
     source_url: "https://hcapps.holycross.edu/grades/",
     highlights: ["Allows faculty to always have digital access to their grade distributions for every semester taught at the college", "Views are all downloadable as PDF to allow for safekeeping records" ],
@@ -88,7 +88,7 @@ export const projects = [
     title: "AudienceView to Hubspot Integration",
     description:
       "An ingestion service that parsed daily ticket sales data and created missing data in Hubspot CRM to assist with College Marketing Team",
-    technologies: ["JavaScript", "Hubspot", "AWS Lambda", "S3"],
+    technologies: ["Node.js", "Hubspot", "AWS Lambda", "S3"],
     image_url: "https://8713277.fs1.hubspotusercontent-na1.net/hubfs/8713277/Imported_Blog_Media/Hubspot%20-%20Logo%20img%201.png",
     source_url: "",
     highlights: ["Removed need to manually import users, deals, and events from a legacy ticketing system to newly purchased CRM tool", "Helped marketing build better campaigns, target alumni and recurring guests for special promotions, and avoid sending duplicate emails to potential customers"],
