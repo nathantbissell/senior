@@ -24,7 +24,7 @@ export default function Projects() {
           Projects
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          A showcase of my previous projects
+          A showcase of my previous works
         </h2>
       </header>
 
@@ -51,7 +51,7 @@ export default function Projects() {
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-[var(--page-surface)] text-[11px] uppercase tracking-[0.24em] text-[var(--page-muted)]">
-                  Demo Preview
+                  Not Available
                 </div>
               )}
             </div>
@@ -126,7 +126,7 @@ export default function Projects() {
                     )}
                     {hasLink && (
                       <p className="mt-3 text-xs uppercase tracking-[0.24em] text-[var(--page-meta)]">
-                        View Demo
+                        Visit Project
                       </p>
                     )}
                   </div>

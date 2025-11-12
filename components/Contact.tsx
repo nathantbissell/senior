@@ -3,6 +3,10 @@ import { personalInfo } from "@/data/resume";
 export default function Contact() {
   const contactItems = [
     {
+      label: "Location",
+      value: personalInfo.location,
+    },
+    {
       label: "Email",
       value: personalInfo.email,
       href: `mailto:${personalInfo.email}`,
@@ -11,25 +15,7 @@ export default function Contact() {
       label: "Phone",
       value: personalInfo.phone,
       href: `tel:${personalInfo.phone}`,
-    },
-    {
-      label: "Location",
-      value: personalInfo.location,
-    },
-    personalInfo.linkedin
-      ? {
-          label: "LinkedIn",
-          value: "Connect on LinkedIn",
-          href: personalInfo.linkedin,
-        }
-      : null,
-    personalInfo.github
-      ? {
-          label: "GitHub",
-          value: "View profile",
-          href: personalInfo.github,
-        }
-      : null,
+    }
   ].filter(Boolean) as { label: string; value: string; href?: string }[];
 
   return (

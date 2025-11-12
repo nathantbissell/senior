@@ -5,14 +5,14 @@ export const personalInfo = {
   email: "nathantbissell@gmail.com",
   phone: "401-556-2161",
   summary:
-    "Six years as a Full Stack SWE with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Current member of the Internal Applications Team in a higher education setting, partnering with faculty, staff, and students amongst a top Liberal Arts College in the nation.",
+    "Six years as a full stack SWE with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Current member of the Internal Applications Team in a higher education setting, partnering with faculty, staff, and students amongst a top liberal arts college in the nation.",
   linkedin: "https://www.linkedin.com/in/nathan-bissell/",
   github: "https://github.com/nathantbissell",
 };
 
 export const skills = {
-  languages: ["TypeScript", "JavaScript", "C#", "Ruby on Rails", "Python"],
-  frontend: ["React", "Next.js", "Tailwind CSS", "Mantine"],
+  languages: ["TypeScript", "JavaScript", "C#", "Ruby", "Python"],
+  frontend: ["ReactJs", "Next.js", "Tailwind CSS", "Mantine"],
   backend: ["Node.js", "Ruby on Rails", "ASP.NET Core", "Entity Framework", "Express.js"],
   databases: ["PostgreSQL", "DynamoDB", "Oracle", "MongoDB"],
   cloud: ["AWS Lambda", "S3", "DynamoDB", "Elastic Container Service", "Azure DevOps"],
