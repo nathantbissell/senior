@@ -5,26 +5,26 @@ export const personalInfo = {
   email: "nathantbissell@gmail.com",
   phone: "401-556-2161",
   summary:
-    "Five years as a full stack web developer with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Currently part of the Applications Team in higher education, partnering with faculty, staff, and students to deliver reliable digital experiences.",
+    "Six years as a full stack web developer with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Currently part of the Applications Team in higher education, partnering with faculty, staff, and students to deliver reliable digital experiences.",
   linkedin: "https://www.linkedin.com/in/nathan-bissell/",
   github: "https://github.com/nathantbissell",
 };
 
 export const skills = {
-  languages: ["TypeScript", "JavaScript", "C#", "Ruby", "SQL"],
-  frontend: ["React", "Next.js", "Redux", "Tailwind CSS", "HTML/CSS"],
-  backend: ["Node.js", "ASP.NET Core", "Ruby on Rails", "Express.js", "Entity Framework"],
-  databases: ["SQL Server", "MongoDB", "PostgreSQL", "DynamoDB"],
-  cloud: ["AWS (Lambda, S3, DynamoDB)", "Azure DevOps"],
-  tools: ["Git", "Docker", "Postman", "Jira", "HubSpot"],
-  apis: ["OpenAI", "Zoom", "Shopify", "QuickBooks", "Stripe", "AudienceView"],
+  languages: ["TypeScript", "JavaScript", "C#", "Ruby on Rails", "Python"],
+  frontend: ["React", "Next.js", "Tailwind CSS", "Mantine"],
+  backend: ["Node.js", "Ruby on Rails", "ASP.NET Core", "Entity Framework", "Express.js"],
+  databases: ["PostgreSQL", "DynamoDB", "Oracle", "MongoDB"],
+  cloud: ["AWS Lambda", "S3", "DynamoDB", "Elastic Container Service", "Azure DevOps"],
+  tools: ["Git", "Docker", "Postman" ],
+  apis: ["OpenAI", "Zoom", "Shopify", "QuickBooks", "Stripe", "AudienceView", "Hubspot", "Salesforce", ],
 };
 
 export const experience = [
   {
     company: "College of the Holy Cross",
     role: "Full Stack Web Developer",
-    period: "May 2023 - Present",
+    period: "2023 - Now",
     location: "Worcester, MA",
     description:
       "Lead AI automations and data integration projects for Information Technology Services, delivering solutions that serve the broader campus community on schedule.",
@@ -39,7 +39,7 @@ export const experience = [
   {
     company: "Connex eCommerce",
     role: "Software Engineer II",
-    period: "March 2020 - May 2023",
+    period: "2020 - 2023",
     location: "Remote",
     description:
       "Worked across a C#, ASP.NET Core, and Entity Framework application supporting hundreds of merchants, with a focus on reliability, integrations, and customer success.",
@@ -66,43 +66,52 @@ export const projects = [
     title: "Campus Events Syndication Platform",
     description:
       "Event aggregation API powering intranet and public endpoints with daily data sync.",
-    technologies: ["Ruby on Rails", "SolidQueue", "ActiveRecord", "RESTful APIs"],
+    technologies: ["Ruby on Rails", "SolidQueue", "Salesforce", "Simpplr", "Internal APIs"],
     image_url: "https://i.imgur.com/QGlZyKv.jpeg",
     source_url: "https://hcapps.holycross.edu/events-system/",
-    highlights: ["Promoted adoption of newly implemented campus Intranet system", "Allowed for events to be staged directly on holycross.edu/events as a public facing API", "Fully automated daily synchronization of events from multiple campus departments into a single source of truth", "Full admin views with a searchable Scheduled Events list, Syndication Rules, and Destinations."],
+    highlights: ["Promoted adoption of newly implemented campus Intranet system", "Allowed for events to be staged directly on holycross.edu/events as a public facing API", "Fully automated daily synchronization of events from multiple campus departments into a single source of truth", "Full admin views with a searchable Scheduled Events list, Syndication Rules, and Destinations"],
   },
   {
     title: "Grade Distribution Report",
     description:
-      "",
-    technologies: ["Ruby on Rails", "Oracle" ],
+      "A full stack application which renders an archive of individual instructor and department level reports",
+    technologies: ["Ruby on Rails", "Oracle", "Okta" ],
     image_url: "https://i.imgur.com/nQEH45y.jpeg",
     source_url: "https://hcapps.holycross.edu/grades/",
-    highlights: ["placeholder", ],
+    highlights: ["Allows faculty to always have digital access to their grade distributions for every semester taught at the college", "Views are all downloadable as PDF to allow for safekeeping records" ],
   },
   {
     title: "Secure File Transfer System",
     description:
-      "",
-    technologies: ["Ruby on Rails", "ActiveStorage", "MailChimp API"],
+      "A system built for sending confidential documents to internal and external users",
+    technologies: ["Ruby on Rails", "MailChimp API", "Okta"],
     image_url: "https://i.imgur.com/1tLmMUZ.jpeg",
     source_url: "https://hcapps.holycross.edu/file-transfer/",
-    highlights: ["placeholder", ],
+    highlights: ["Refreshed an existing transfer system with modern UI", "allowed for better validation, enhanced features such as requesting files or CC (Carbon Copy) users to have access to files" ],
+  },
+  {
+    title: "AudienceView to Hubspot Integration",
+    description:
+      "An ingestion service that parsed daily ticket sales data and created missing data in Hubspot CRM to assist with College Marketing Team",
+    technologies: ["JavaScript", "Hubspot", "AWS Lambda", "S3"],
+    image_url: "",
+    source_url: "",
+    highlights: ["Removed need to manually import users, deals, and events from a legacy ticketing system to newly purchased CRM tool", "Helped marketing build better campaigns, target alumni and recurring guests for special promotions, and avoid sending duplicate emails to potential customers"],
   },
   {
     title: "Equipment Lending System",
     description:
-      "",
-    technologies: ["React", "TypeScript", "NodeJs" ],
+      "The system used by student workers in the ITS Helpdesk to process and fulfill equipment lending requests",
+    technologies: ["React", "TypeScript", "NodeJs", "MailChimp API" ],
     image_url: "https://i.imgur.com/Z2fIoBh.jpeg",
     source_url: "https://hcapps.holycross.edu/file-transfer/",
-    highlights: ["placeholder", ],
+    highlights: ["Promoted college digitial initiatives to move away from pen and paper borrowing process", "Fully integrated with Solarwinds assets to ensure availability and document lost or stolen devices", "MailChimp API integration allowing for updating users on status of their requests, when devices are availble to be picked up, and nagging them when device is overdue." ],
   },
     {
     title: "Atrium Meal Dashboard",
     description:
-      "Real-time meal swipe dashboard with live API data and time-based reporting.",
-    technologies: ["React", "TypeScript", "REST API", "Real-time Data"],
+      "Real-time meal swipe dashboard with Atrium API data and time-based reporting.",
+    technologies: ["React", "TypeScript", "Atrium" ],
     image_url: "https://i.imgur.com/r0Sujgt.jpeg",
     source_url: "https://hcapps.holycross.edu/hcs/meals/",
     highlights: ["Currently displayed in the back of house kitchen area for all dining staff", "Provides excellent data visualization and insight to the amount of meal swipes being used on a daily basis"],
@@ -129,7 +138,7 @@ export const projects = [
     title: "Connex Reporting Tool",
     description:
       "A reporting platform with five major eCommerce platform integrations.",
-    technologies: ["ASP.NET Core", "React", "TypeScript", "Redux", "Entity Framework"],
+    technologies: ["ASP.NET Core", "React", "TypeScript", "Entity Framework"],
     image_url: "https://i.imgur.com/6igy8v4.jpeg",
     source_url: "https://inventory.connexecommerce.com/dashboard",
     highlights: ["Multi-API Integration (Stripe, ShipStation, WooCommerce, Shopify, Amazon)", "Integrated directly with an existing QuickBooks Online connection to inject reporting data"],

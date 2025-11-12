@@ -26,9 +26,6 @@ export default function Hero() {
 
         <div className="flex-1 space-y-6">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--page-meta)]">
-              {personalInfo.location}
-            </p>
             <h1 className="text-4xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-5xl">
               {personalInfo.name}
             </h1>
