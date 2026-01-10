@@ -54,7 +54,7 @@ export const projects = [
       "Customer-facing portal for automated contract review using OpenAI with customizable validation criteria.",
     technologies: ["Ruby on Rails", "OpenAI API", "PostgreSQL", "JavaScript"],
     image_url: "https://i.imgur.com/q2P7rFg.jpeg",
-    source_url: "https://www.loom.com/share/f6f7816341ab44adb140ebe385fdde47",
+    source_url: "",
     highlights: ["Acted as a first point of contact for new service contracts proposed to The College", "Fully customizable settings to control number of reviews, custom LLM personality prompts, and failure safeguards.", "Immediately diagnosed issues with any contract requirements and ensured basic compliance standards are met", "Automated emails to provide transparency and ensure stakeholders are notified when contracts passed validation"],
   },
   {
