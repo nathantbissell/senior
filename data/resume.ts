@@ -10,16 +10,6 @@ export const personalInfo = {
   github: "https://github.com/nathantbissell",
 };
 
-export const skills = {
-  languages: ["TypeScript", "JavaScript", "C#", "Ruby", "Python"],
-  frontend: ["ReactJs", "Next.js", "Tailwind CSS", "Mantine"],
-  backend: ["Node.js", "Ruby on Rails", "ASP.NET Core", "Entity Framework", "Express.js"],
-  databases: ["PostgreSQL", "DynamoDB", "Oracle", "MongoDB"],
-  cloud: ["AWS Lambda", "S3", "DynamoDB", "Elastic Container Service", "Azure DevOps"],
-  tools: ["Git", "Docker", "Postman"],
-  apis: ["OpenAI", "Zoom", "Shopify", "QuickBooks", "Stripe", "AudienceView", "Hubspot", "Salesforce", "SolarWinds", "Zoom Chat API"],
-};
-
 export const experience = [
   {
     company: "Travelers Insurance",
@@ -53,8 +43,7 @@ export const experience = [
     location: "Worcester, MA",
     description:
       "Lead AI automations and data integration projects for Information Technology Services, delivering solutions that serve the broader campus community.",
-    achievements: [
-    ],
+    achievements: ["Designed and built several projects as lead developer (see Experience section).", "Worked directly with stakeholders to understand user issues, triage priorities and build basic MVP for user solutions."],
   },
   {
     company: "Connex eCommerce",

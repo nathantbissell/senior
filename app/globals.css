@@ -37,20 +37,6 @@
   --page-accent: #93c5fd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --page-background: #0b1120;
-    --page-foreground: #f8fafc;
-    --page-heading: #e0e7ff;
-    --page-muted: #cbd5f5;
-    --page-meta: #94a3b8;
-    --page-border: rgba(148, 163, 184, 0.25);
-    --page-surface: #111828;
-    --page-subtle: rgba(148, 163, 184, 0.08);
-    --page-accent: #93c5fd;
-  }
-}
-
 body {
   background: var(--page-background);
   color: var(--page-foreground);

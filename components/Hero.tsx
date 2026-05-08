@@ -1,13 +1,10 @@
 import { personalInfo } from "@/data/resume";
 
-const initials = personalInfo.name
-  .split(" ")
-  .map((part) => part.charAt(0))
-  .join("")
-  .slice(0, 2)
-  .toUpperCase();
-
 export default function Hero() {
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    personalInfo.email,
+  )}`;
+
   return (
     <section
       id="top"
@@ -39,6 +36,37 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--page-muted)]">
+            {personalInfo.email && (
+              <a
+                href={gmailUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-[var(--page-border)] px-4 py-2 font-medium tracking-wide text-[var(--page-muted)] transition-colors hover:border-[var(--page-meta)] hover:text-[var(--page-heading)]"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4 flex-shrink-0"
+                >
+                  <path
+                    d="M3.5 6.5h17v11h-17z"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="m4 7 8 6 8-6"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span>Gmail</span>
+              </a>
+            )}
+
             {personalInfo.github && (
               <a
                 href={personalInfo.github}

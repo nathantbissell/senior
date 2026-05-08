@@ -8,8 +8,6 @@ const navLinks = [
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navigation() {
@@ -31,9 +29,9 @@ export default function Navigation() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const storedTheme = window.localStorage.getItem("theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const nextTheme = storedTheme ?? (prefersDark ? "dark" : "light");
+    const storedTheme = window.localStorage.getItem("theme");
+    const nextTheme: Theme =
+      storedTheme === "dark" || storedTheme === "light" ? storedTheme : "light";
 
     applyTheme(nextTheme);
     setMounted(true);

@@ -21,12 +21,11 @@ export default function Experience() {
           Experience
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Led multi-disciplinary teams to ship clean, user-friendly products
+          Worked with multi-disciplinary teams to ship clean, user-friendly products
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          I combine engineering leadership with proven, actionable output. I excel at collaborating
-          closely with stakeholders, delivering measurable outcomes, and driving innovation
-          initiatives whenever possible.
+          I combine engineering leadership with proven, actionable results. I excel at collaborating
+          closely with stakeholders, delivering measurable outcomes, and innovating whenever necessary.
         </p>
       </header>
 
@@ -74,8 +73,8 @@ export default function Experience() {
               </p>
 
               <ul className="indented-paragraph space-y-3 text-sm leading-6 text-[var(--page-muted)]">
-                {job.achievements.map((achievement) => (
-                  <li key={achievement} className="flex gap-3">
+                {job.achievements.map((achievement, index) => (
+                  <li key={`${job.company}-achievement-${index}`} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--page-meta)]" />
                     <span>{achievement}</span>
                   </li>

@@ -7,15 +7,11 @@ export default function Education() {
       className="mx-auto max-w-4xl border-b border-[var(--page-border)] px-6 py-16 sm:py-20"
     >
       <header className="mb-10 space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--page-meta)]">
-          Education
-        </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Lifelong learning grounded in applied practice
+          Education
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          Formal computer science foundations complemented by immersive, hands-on
-          programs focused on modern web development.
+          Experience in both a formal computer science degree, and completion of a modern web development bootcamp.
         </p>
       </header>
 
