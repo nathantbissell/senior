@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { personalInfo } from "@/data/resume";
 
 type Theme = "light" | "dark";
 

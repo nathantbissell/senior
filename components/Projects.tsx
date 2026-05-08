@@ -35,19 +35,28 @@ export default function Projects() {
           const primaryTechnology = project.technologies?.[0];
           const primaryTechnologyIcon =
             primaryTechnology && TECH_ICON_MAP[primaryTechnology];
+          const imageSrc =
+            hasImage && project.image_url.startsWith("/")
+              ? withBasePath(project.image_url)
+              : project.image_url;
+          const isLogoImage = project.image_url.includes("logo");
 
           const media = (
             <div
-              className="group relative block overflow-hidden rounded-lg border border-[var(--page-border)] shadow-sm"
+              className={`group relative block overflow-hidden rounded-lg border border-[var(--page-border)] shadow-sm ${
+                isLogoImage ? "bg-black" : ""
+              }`}
               style={{ aspectRatio: "16 / 9" }}
             >
               {hasImage ? (
                 <Image
-                  src={project.image_url}
+                  src={imageSrc}
                   alt={`${project.title} demo preview`}
                   fill
                   sizes="(min-width: 640px) 224px, 100vw"
-                  className="object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  className={`transition-transform duration-200 group-hover:scale-[1.02] ${
+                    isLogoImage ? "object-contain p-5" : "object-cover"
+                  }`}
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-[var(--page-surface)] text-[11px] uppercase tracking-[0.24em] text-[var(--page-muted)]">

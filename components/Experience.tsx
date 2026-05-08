@@ -4,6 +4,8 @@ import { experience } from "@/data/resume";
 import { withBasePath } from "@/lib/basePath";
 
 const COMPANY_LOGO_MAP: Record<string, { src: string; size: number }> = {
+  "Travelers Insurance": { src: "/company-icons/travelers-emblem.jpg", size: 72 },
+  "Rhode Island Therapy Center": { src: "/company-icons/therapy-center-logo-gray.png", size: 84 },
   "College of the Holy Cross": { src: "/company-icons/holycross.svg", size: 72 },
   "Connex eCommerce": { src: "/company-icons/connex.svg", size: 84 },
 };

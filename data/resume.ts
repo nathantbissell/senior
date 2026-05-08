@@ -22,9 +22,34 @@ export const skills = {
 
 export const experience = [
   {
+    company: "Travelers Insurance",
+    role: "Software Engineer I",
+    period: "2026 - Now",
+    location: "Hartford, CT",
+    description:
+      "Software engineering role supporting the Business Insurance Workstation division, with a focus on reliable application delivery, cloud-aware systems, and business insurance workflows.",
+    achievements: [
+      "Responsible for maintaining and enhancing document generation, pricing documentation, and issuance instruction services.", "Contributing across application development, debugging, performance monitoring, cloud services, and high-availability system operations.",
+    ],
+  },
+  {
+    company: "Rhode Island Therapy Center",
+    role: "Full Stack Developer",
+    period: "2026",
+    location: "Independent Project",
+    description:
+      "Built a Rails 8 platform for therapy practices to manage therapist memberships, room reservations, subscriptions, billing, and operational support.",
+    achievements: [
+      "Implemented Stripe checkout, subscriptions, hosted billing portal access, webhook processing, invoice reconciliation, booking charges, and refunds.",
+      "Designed room booking workflows with subscription eligibility, booking horizons, weekly plan quotas, blackout dates, and PostgreSQL-backed conflict prevention.",
+      "Created admin tooling for users, plans, locations, rooms, payments, blackout dates, service requests, and background job monitoring.",
+      "Added transactional email notifications and RSpec coverage across models, requests, services, jobs, integrations, and tasks.",
+    ],
+  },
+  {
     company: "College of the Holy Cross",
     role: "Full Stack Web Developer",
-    period: "2023 - Now",
+    period: "2023 - 2026",
     location: "Worcester, MA",
     description:
       "Lead AI automations and data integration projects for Information Technology Services, delivering solutions that serve the broader campus community.",
@@ -49,13 +74,27 @@ export const experience = [
 
 export const projects = [
   {
+    title: "Rhode Island Therapy Center",
+    description:
+      "Rails platform for therapy practices to manage memberships, room reservations, subscription billing, and operational support.",
+    technologies: ["Ruby on Rails", "PostgreSQL", "Stripe", "Tailwind", "AWS", "SolidQueue"],
+    image_url: "/project-images/therapy-center-logo-gray.png",
+    source_url: "https://my.ritherapycenter.org",
+    highlights: [
+      "Built therapist and admin authentication with Devise, including Google OAuth sign-in option.",
+      "Integrated Stripe products, prices, checkout, billing portal, subscriptions, invoices, webhooks, booking charges, and refunds.",
+      "Enforced booking integrity with Rails validations, blackout date checks, and overlap detection.",
+      "Shipped admin workflows for plan management, users, locations, rooms, payments, blackout dates, service requests, and Mission Control Jobs.",
+    ],
+  },
+  {
     title: "AI Contract Review Service",
     description:
       "Customer-facing portal for automated contract review using OpenAI with customizable validation criteria.",
     technologies: ["Ruby on Rails", "OpenAI API", "PostgreSQL", "JavaScript"],
     image_url: "https://i.imgur.com/q2P7rFg.jpeg",
     source_url: "",
-    highlights: ["Acted as a first point of contact for new service contracts proposed to The College", "Fully customizable settings to control number of reviews, custom LLM personality prompts, and failure safeguards.", "Immediately diagnosed issues with any contract requirements and ensured basic compliance standards are met", "Automated emails to provide transparency and ensure stakeholders are notified when contracts passed validation"],
+    highlights: ["Fully customizable settings to control number of reviews, custom LLM personality prompts, and failure safeguards.", "Immediately diagnosed issues with any contract requirements and ensured basic compliance standards are met", "Automated emails to provide transparency and ensure stakeholders are notified when contracts passed validation"],
   },
   {
     title: "Campus Events Syndication Platform",
