@@ -21,11 +21,10 @@ export default function Experience() {
           Experience
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          Worked with multi-disciplinary teams to ship clean, user-friendly products
+          Continuously working on user-friendly products
         </h2>
         <p className="indented-paragraph text-sm leading-7 text-[var(--page-muted)]">
-          I combine engineering leadership with proven, actionable results. I excel at collaborating
-          closely with stakeholders, delivering measurable outcomes, and innovating whenever necessary.
+          I excel at collaborating closely with stakeholders, delivering measurable outcomes, and innovating whenever necessary.
         </p>
       </header>
 
@@ -55,7 +54,7 @@ export default function Experience() {
             </div>
 
             <div className="space-y-4">
-              <div>
+              <div className="space-y-1">
                 <h3 className="text-xl font-semibold text-[var(--page-heading)] sm:text-2xl">
                   {job.role}
                 </h3>

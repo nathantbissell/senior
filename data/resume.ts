@@ -170,17 +170,17 @@ export const projects = [
 
 export const education = [
   {
-    degree: "Bachelor of Computer Science",
+    degree: "Bachelors Degree - Computer Science",
     school: "Rhode Island College",
     year: "2017",
-    awards: ["Most Active Freshman - Student Community Government Awards 2012"],
+    awards: ["Most Active Freshman - Student Community Government Awards 2012", "Street Team Coordinator - WXIN", "Student Community Government - At Large Representative", "Anchor TV Cameraman"],
   },
   {
     degree: "Web Developer Immersive Coding Boot Camp",
     school: "General Assembly",
     year: "2019",
     awards: [
-      "Completed 500-hour immersive curriculum with a capstone full-stack project using React and Node.js",
+      "Completed a 500-hour curriculum with several full-stack projects using Ruby on Rails, React, and Node.js",
     ],
   },
 ];

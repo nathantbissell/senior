@@ -24,7 +24,7 @@ export default function Projects() {
           Projects
         </p>
         <h2 className="text-3xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-4xl">
-          A showcase of my previous works
+          Previous professional work
         </h2>
       </header>
 

@@ -26,7 +26,7 @@ export default function Hero() {
             <h1 className="text-4xl font-semibold tracking-tight text-[var(--page-heading)] sm:text-5xl">
               {personalInfo.name}
             </h1>
-            <p className="text-lg font-medium text-[var(--page-muted)]">
+            <p className="m-5 text-lg font-medium text-[var(--page-muted)]">
               {personalInfo.title}
             </p>
           </div>
