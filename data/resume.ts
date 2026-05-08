@@ -5,7 +5,7 @@ export const personalInfo = {
   email: "nathantbissell@gmail.com",
   phone: "401-556-2161",
   summary:
-    "Six years as a full stack SWE with experience in C#, ASP.NET Core, Ruby on Rails, JavaScript, React, and TypeScript. Current member of the Internal Applications Team in a higher education setting, partnering with faculty, staff, and students amongst a top liberal arts college in the nation.",
+    "Six years experience as a Software Engineer in C#, ASP.NET Core, Ruby on Rails, JavaScript / TypeScript, and React. Current member of Travelers Insurance Business Insurance Workstation development team.",
   linkedin: "https://www.linkedin.com/in/nathan-bissell/",
   github: "https://github.com/nathantbissell",
 };
