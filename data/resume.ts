@@ -77,6 +77,18 @@ export const projects = [
     ],
   },
   {
+    title: "CPFFL Historical Data Archive",
+    description:
+      "Static, searchable archive preserving a 20+ year ESPN Fantasy Football League history without requiring an ESPN login or production backend. As ESPN retires more data over time, we deemed it necessary to preserve the league's history for future references and documentation.",
+    technologies: ["React", "TypeScript", "Vite", "Python", "ESPN API"],
+    image_url: "/project-images/cpffl.png",
+    source_url: "https://couch-potatoes-ffl.github.io/archive/",
+    highlights: [
+      "Built an authenticated Python exporter that captures season and weekly ESPN data in raw and structured local formats.",
+      "Generated a compact static archive with season, player, and search indexes for fast browser-based exploration.",
+      "Implemented a React front-end with TypeScript and Vite for a responsive, interactive user experience.",],
+  },
+  {
     title: "AI Contract Review Service",
     description:
       "Customer-facing portal for automated contract review using OpenAI with customizable validation criteria.",
